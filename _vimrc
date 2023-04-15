@@ -10,6 +10,7 @@ set laststatus=2
 set hlsearch
 set showmatch
 set history=1000
+colorscheme anderson
 
 "Plugins
 
