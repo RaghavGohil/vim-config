@@ -4,18 +4,20 @@
 
 set nocompatible
 set nu
-syntax on
+set ma "sets modifiable for nerdtree
+set background=dark
+syntax enable
 set laststatus=2
 set hlsearch
 set hidden
 set showmatch
 set history=1000
-
-"color settings
-colorscheme anderson
+set cursorline
+set cursorcolumn
+set t_Co=256
+colorscheme handmade-hero
 
 "Plugins
-
 call plug#begin()
 "consists of multiple colorschemes and themes
 Plug 'rafi/awesome-vim-colorschemes'
@@ -32,3 +34,12 @@ nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
+
+"File read
+au BufNewFile,BufRead *.py
+	\ set tabstop=4
+	\ set softtabstop=4
+	\ set shiftwidth=4
+	\ set textwidth=79
+	\ set expandtab
+	\ set autoindent
